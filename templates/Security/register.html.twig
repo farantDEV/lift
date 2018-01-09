@@ -1,0 +1,46 @@
+{% extends 'base_security.html.twig' %}
+  
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-4">
+				<div class="account-box">
+					<a href="{{ path('index') }}">
+						<div class="logo ">
+							<img src="assets/img/logo/logoFlint.svg" class="lf_logo"/>
+						</div>
+					</a>
+					<form class="form-signin" action="{{ path('user_registration') }}"  method="post">
+						{{ form_errors(form) }}
+						<div class="form-group">
+							 {{ form_widget(form.username, {'attr': {'class': 'form-control', placeholder: 'Username'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_widget(form.email, {'attr': {'class': 'form-control', placeholder: 'Email'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_widget(form.password.first, {'attr': {'class': 'form-control', placeholder: 'Password'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_widget(form.password.second, {'attr': {'class': 'form-control', placeholder: 'Repeat password'}}) }}
+						</div>
+						{{ form_rest(form) }}
+
+						<button class="btn btn-lg btn-block purple-bg-register" type="submit">Sign up</button>
+					</form>
+					<div class="or-box">
+						<span class="or">OR</span>
+						<div class="row">
+							<div class="col-md-6 row-block">
+								<a href="" class="btn btn-facebook btn-block">Facebook</a>
+							</div>
+							<div class="col-md-6 row-block">
+								<a href="" class="btn btn-google btn-block">Google</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

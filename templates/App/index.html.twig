@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+  	<div class="overlay"></div>
+		
+         <section class="cd-hero">
+			{{ include('menu_nav.html')}}
+			<ul class="cd-hero-slider">
+				{{ include('Slides/slide_1.html')}}
+
+				{{ include('Slides/slide_2.html')}}
+
+				{{ include('Slides/slide_3.html')}}
+
+				{{ include('Slides/slide_4.html')}}
+
+				{{ include('Slides/slide_5.html')}}
+			</ul> <!-- .cd-hero-slider -->
+        </section> <!-- .cd-hero -->
+         {{ include('footer.html')}}
+  {% endblock %}   
+  

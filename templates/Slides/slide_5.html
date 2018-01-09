@@ -1,0 +1,83 @@
+{% trans_default_domain "messages" %}
+ <li>
+  <div class="heading">
+	<h1>Contacts</h1>
+	<span> I'll be responded within 48 hrs</span> 
+  </div>
+  <div class="cd-half-width fivth-slide">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12">
+		  <div class="content fivth-content">
+			<div class="row">
+			  <div class="col-md-4">
+				<div class="left-info">
+				  <p> 
+				  	For more informations, feel free to reach me:
+				  <br><br>
+				  <em>Mon-Sat (Office hours UTC+1)<br>Location:</em>
+				  <em>Paris, Fr<br>+33 651.571.733</em>
+				  </p>
+				  <ul class="social-icons">
+					<i><a href="https://www.linkedin.com/in/loic-farant-aa5a18153/" target="_blank"><i class="fa fa-linkedin"></i></a></i>
+					<i><a href="https://www.viadeo.com/p/00219n92b65n028" target="_blank" ><i class="fa fa-viadeo "></i></a></i>
+					<i><a href="https://stackoverflow.com/users/8912825/jagermartin?tab=profile" target="_blank"><i class="fa fa-stack-overflow"></i></a></i>
+					<i><a href="https://symfony-devs.slack.com/messages/C3A2XAQ20/team/U88L5CY1H/" target="_blank"><i class="fa fa-slack"></i></a></i>
+					<i><a href="https://github.com/farantDEV" target="_blank"><i class="fa fa-github"></i></a></i>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="col-md-8">
+				<div class="row">
+			  
+			  {% if is_granted('ROLE_USER') %}
+			  	<form id="contact" action="" method="post">
+				   {{ form_errors(form) }}
+					<div class="col-md-6 contactForm">
+					   {{ form_widget(form.name, {'attr': {'class': 'form-control', 'value': 'Name'}}) }}
+					</div>
+					<div class="col-md-6 contactForm">
+					 {{ form_widget(form.email, {'attr': {'class': 'form-control', placeholder: 'Email'}}) }}
+					</div>
+					<div class="col-md-12 contactForm">
+					  {{ form_widget(form.content, {'attr': {'class': 'form-control', placeholder: 'Message'}}) }}
+					</div>
+					{{ form_rest(form) }}
+					<div class="col-md-12">
+					  <fieldset>
+						<button type="submit" id="form-submit"  class="btn">Send Message</button>
+					  </fieldset>
+					</div>
+				  </form>
+			  {% else %}
+				  <form id="contact" action="" method="post">
+				   {{ form_errors(form) }}
+					<div class="col-md-6 contactForm">
+					  
+					   {{ form_widget(form.name, {'attr': {'class': 'form-control', placeholder: 'Name'}}) }}
+					</div>
+					<div class="col-md-6 contactForm">
+					
+					 {{ form_widget(form.email, {'attr': {'class': 'form-control', placeholder: 'Email'}}) }}
+					</div>
+					<div class="col-md-12 contactForm">
+					  
+					  {{ form_widget(form.content, {'attr': {'class': 'form-control', placeholder: 'Message'}}) }}
+					</div>
+					{{ form_rest(form) }}
+					<div class="col-md-12">
+					  <fieldset>
+						<button type="submit" id="form-submit"  class="btn">Send Message</button>
+					  </fieldset>
+					</div>
+				  </form>
+			   {% endif %}
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>                  
+	</div>
+  </div>
+</li>

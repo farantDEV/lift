@@ -1,0 +1,32 @@
+{% extends 'base_security.html.twig' %}
+
+
+{% block body %}
+ 	<a href="{{ path('index')}}"><div class="image-icon-logo"><img src="assets/img/logo/logoFlint.svg" class="logo top-corner"/></div></a>
+  
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron" >
+				<div class="well">
+					<div class="image-icon"><img src="assets/img/logo/email.svg" class="menuIcon"></div>
+					<h2 class="text-center">Your message was successffully delivered </h2>
+					<p class="text-center">I'll be responded within 48 hours </p>
+					<p class="text-center">Regards.</p>
+				</div>
+				{% if is_granted('ROLE_USER') %}
+					<center><div class="btn-group">
+						<a href="{{ path('index')}}" class="btn btn-lg btn-primary">Home</a>
+						<a href="{{ path('security_logout')}}" class="btn btn-lg btn-default">Log Out</a>
+					</div></center>
+				{% else %}
+					<center><div class="btn-group">
+						<a href="{{ path('security_login')}}" class="btn btn-lg btn-blue">Sign In</a>
+						<a href="{{ path('user_registration')}}" class="btn btn-lg btn-orange">Sign Up</a>
+					</div></center>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+        
+ {% endblock %}   
+ 

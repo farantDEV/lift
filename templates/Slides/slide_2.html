@@ -1,0 +1,58 @@
+ <li>
+	<div class="heading">
+		<h1>About Me</h1>
+		<span>A Real life Swiss army knife</span> 
+	</div>
+	<div class="cd-half-width second-slide">   
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12">
+			  <div class="content second-content">
+				<div class="row">
+				  <div class="col-md-7 left-image">
+					<img src="assets/img/pics/panel2.svg">
+				  </div>
+				  <div class="col-md-5">
+					<div class="right-about-text">
+						<h4>Multifunction mode: <em>ON </em></h4>
+						<p>I've gained experience working in 'Not only I.T' domain like entertainment, real estate renovation and social work.<br/> The common point in all this activities:<br/>
+						<strong>People with different abilities, reunited around a project.</strong> <br/><br/>
+						Since 2001 my ambition remain the same, step up and joining teams to make things happens.</p><br/>
+						{% if is_granted('ROLE_USER') %}
+						  <div class="primary-button">
+							<a href="/"><i class="fa fa-book fa-2x" aria-hidden="true"></i> Story</a>
+						  </div>
+						{% else %}
+						<br/>
+						<a href="{{ path('security_login') }}">Login</a>/<a href="{{ path('security_login') }}">Register</a> for more about me.
+						{% endif %}
+					</div>
+				  </div>
+				</div>
+				<div class="row">
+				  <div class="col-md-7">
+					<div class="left-about-text">
+					  <h4>From day 1 to a final product.</h4>
+					  <p>I stakeholder every steps of a digital project:<br/>
+					   Analysis / Design / Development / Production / Evaluation.<br/> </p>
+					<p>I provide: coding, documents writing, budget tracking, meeting conduct and team coordination.</p> <br/>
+					  	{% if is_granted('ROLE_USER') %} 
+				  			<div class="primary-button">
+								<a href="../public/dl/resume_farant.pdf" download><i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i> Resume</a>
+						  	</div>
+					  	{% else %}
+							<br/>
+							<a href="{{ path('security_login') }}">Login</a>/<a href="{{ path('security_login') }}">Register</a> to download resume.
+						{% endif %}
+					</div>
+				  </div>
+				  <div class="col-md-5 right-image">
+					<img src="assets/img/pics/right-about-image.jpg">
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>                  
+		</div>
+	</div>
+</li>

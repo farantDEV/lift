@@ -1,0 +1,7 @@
+{% extends 'base_security.html.twig' %}
+ 
+{% block body %}
+    Bienvenue {{ app.user.username }} !
+        <a href="{{ path('security_logout')}}">log out</a>
+        
+{% endblock %}
