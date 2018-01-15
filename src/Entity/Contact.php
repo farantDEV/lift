@@ -13,8 +13,8 @@ class Contact
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer", name="id")
      */
     private $id;
 
@@ -22,7 +22,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(type="string", unique=false)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Have you forgot to enter your name ?")
      */
 	private $name;
 	
@@ -30,7 +30,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(type="string", unique=false)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Have you forgot to enter your email ?")
      * @Assert\Email()
      */
 	private $email;
@@ -39,7 +39,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(type="string", unique=false)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Have you forgot to enter your message ?")
      */
 	private $content;
 	

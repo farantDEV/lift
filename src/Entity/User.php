@@ -10,8 +10,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @ORM\Table(name="user")
- * @UniqueEntity(fields="email", message="Email déjà pris")
- * @UniqueEntity(fields="username", message="Username déjà pris")
+ * @UniqueEntity(fields="email", message="This email is already use")
+ * @UniqueEntity(fields="username", message="This username is already use")
  */
 class User implements UserInterface, \Serializable
 {
@@ -28,7 +28,7 @@ class User implements UserInterface, \Serializable
      * @var string
      *
      * @ORM\Column(type="string", unique=true)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Have you forgot to enter your username ?")
      */
     private $username;
  
@@ -36,7 +36,7 @@ class User implements UserInterface, \Serializable
      * @var string
      *
      * @ORM\Column(type="string", unique=true)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Have you forgot to enter your email ?")
      * @Assert\Email()
      */
     private $email;

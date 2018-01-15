@@ -28,7 +28,7 @@ class HomeController extends Controller
 			$em->persist($contact);
             $em->flush();
 			
-			$session->getFlashBag()->add('success', 'Votre message a été envoyé !');
+			$session->getFlashBag()->add('success', 'Your message have been send!');
 			$session->clear();
 			
 			return $this->redirectToRoute('contact_send');
