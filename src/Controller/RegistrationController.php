@@ -28,7 +28,7 @@ class RegistrationController extends Controller
             $user->setPassword($password);
  
             // Par defaut l'utilisateur aura toujours le rôle ROLE_USER
-            $user->setRoles('ROLE_USER');
+            $user->setRoles(['ROLE_USER']);
  
             // On enregistre l'utilisateur dans la base
             $em = $this->getDoctrine()->getManager();
