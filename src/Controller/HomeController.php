@@ -35,22 +35,16 @@ class HomeController extends Controller
 		}
 		
 		
-		return $this->render('App/index.html.twig', array('form' => $form->createView() ));
+		return $this->render('Home/index.html.twig', array('form' => $form->createView() ));
     }
  
-    /**
-     * @Route("/admin", name="admin")
-     */
-    public function admin()
-    {
-        return $this->render('Admin/index.html.twig');
-    }
+    
 	/**
      * @Route("/contactSend", name="contact_send")
      */
     public function contactSend()
     {
-        return $this->render('App/contactSend.html.twig');
+        return $this->render('Home/contactSend.html.twig');
     }
 	
 	/**
@@ -58,6 +52,6 @@ class HomeController extends Controller
      */
     public function ErrorRedirection()
     {
-        return $this->render('App/404.html.twig');
+        return $this->render('Home/404.html.twig');
     }
 }
