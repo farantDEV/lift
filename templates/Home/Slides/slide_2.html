@@ -20,7 +20,7 @@
 						Since 2001 my ambition remain the same, step up and joining teams to make things happens.</p><br/>
 						{% if is_granted('ROLE_USER') %}
 						  <div class="primary-button">
-							<a href="/"><i class="fa fa-book fa-2x" aria-hidden="true"></i> Story</a>
+							<a href="{{ path('story') }}"><i class="fa fa-book fa-2x" aria-hidden="true"></i> Story</a>
 						  </div>
 						{% else %}
 						<br/>

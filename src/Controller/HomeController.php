@@ -15,7 +15,7 @@ class HomeController extends Controller
     /**
      * @Route("/", name="index")
      */
-    public function index(Request $request)
+    public function indexAction(Request $request)
     {
         $session = new Session();
 		$contact = new contact();
@@ -42,7 +42,7 @@ class HomeController extends Controller
 	/**
      * @Route("/contactSend", name="contact_send")
      */
-    public function contactSend()
+    public function contactSendAction()
     {
         return $this->render('Home/contactSend.html.twig');
     }
@@ -53,5 +53,13 @@ class HomeController extends Controller
     public function ErrorRedirection()
     {
         return $this->render('Home/404.html.twig');
+    }
+	
+	/**
+     * @Route("/story", name="story")
+     */
+	 public function storyAction()
+    {
+        return $this->render('Story/story.html.twig');
     }
 }

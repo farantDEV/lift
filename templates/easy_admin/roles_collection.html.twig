@@ -1,0 +1,3 @@
+{% for roles in value %}
+    <span class="label label-{{ cycle(colors, loop.index) }}">{{ roles }}</span>
+{% endfor %}

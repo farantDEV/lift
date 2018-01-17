@@ -1,5 +1,60 @@
 easy_admin:
+    
+    site_name: 'Lïft DashBoard'
+    design:
+        brand_color: '#FF6633'
     entities:
-        - App\Entity\Contact
-        - App\Entity\User
-        - App\Entity\Project
+        User:
+            class: App\Entity\User
+            list:
+                fields:
+                    - {  property: 'username', type: 'text'}
+                    - {  property: 'email', type: 'email'}
+                    - {  property: 'password', type: 'password'}
+                    - {  property: 'roles', type: 'json_array'}
+            form:
+                fields:
+                    - {  property: 'username', type: 'text'}
+                    - {  property: 'email', type: 'email'}
+                    - {  property: 'roles', type: 'collection', label: 'User Role'}
+        Contact:
+            class: App\Entity\Contact
+        Project:
+            class: App\Entity\Project
+            label: 'Lïft Projects'
+            list:
+                Title: 'list.%%entity_label%%'
+                fields:
+                    - {  property: 'name', type: 'text'}
+                    - {  property: 'presentation', type: 'textarea', label: 'About'}
+                    - {  property: 'Client', type: 'text'}
+                    - {  property: 'startDate', type: 'datetime', label: 'start'}
+                    - {  property: 'endDate', type: 'datetime', label: 'end'}
+                    - {  property: 'online', type: 'boolean'}
+                    - {  property: 'host', type: 'url'}
+                    - {  property: 'git', type: 'url'}
+                    - {  property: 'licence', type: 'string'}
+                    - {  property: 'tools', type: 'json_array'}
+                    - {  property: 'contributors', type: 'json_array'}
+                    - {  property: 'images', type: 'json_array'}
+                    - {  property: 'resources', type: 'json_array'}
+                    - {  property: 'plugins', type: 'json_array'}
+                    - {  property: 'bundles', type: 'json_array'}
+            form:
+                Title: '%%entity_label%% (#%%entity_id%%)'
+                fields:
+                    - {  property: 'name', type: 'text'}
+                    - {  property: 'presentation', type: 'textarea', label: 'About'}
+                    - {  property: 'Client', type: 'text'}
+                    - {  property: 'startDate', type: 'datetime', label: 'start'}
+                    - {  property: 'endDate', type: 'datetime', label: 'end'}
+                    - {  property: 'online', type: 'checkbox'}
+                    - {  property: 'host', type: 'url'}
+                    - {  property: 'git', type: 'url'}
+                    - {  property: 'licence', type: 'text'}
+                    - {  property: 'tools', type: 'collection'}
+                    - {  property: 'contributors', type: 'collection'}
+                    - {  property: 'images', type: 'collection'}
+                    - {  property: 'resources', type: 'collection'}
+                    - {  property: 'plugins', type: 'collection'}
+                    - {  property: 'bundles', type: 'collection'}

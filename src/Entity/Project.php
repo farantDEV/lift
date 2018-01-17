@@ -57,7 +57,7 @@ class Project
      * @ORM\Column(type="boolean")
      * @Assert\NotBlank(message="Enter a status for this project.")
      */
-    private $status;
+    private $online;
 	
 	/**
      * @var string
@@ -116,7 +116,21 @@ class Project
      *
      * @ORM\Column(type="json")
      */
-    private $Resources = [];
+    private $resources = [];
+	
+	/**
+     * @var array
+     *
+     * @ORM\Column(type="json")
+     */
+    private $plugins = [];
+	
+	/**
+     * @var array
+     *
+     * @ORM\Column(type="json")
+     */
+    private $bundles = [];
 	
 
     public function getId() {
@@ -162,12 +176,12 @@ class Project
         return $this;
     }
 	
-    public function getStatus() {
-        return $this->status;
+    public function getOnline() {
+        return $this->online;
     }
 
-    public function setStatus($status) {
-        $this->status = $status;
+    public function setOnline($online) {
+        $this->online = $online;
         return $this;
     }
 	
@@ -249,5 +263,27 @@ class Project
     public function setResources(array $resources): void
     {
         $this->resources = $resources;
+    }
+	
+	public function getPlugins(): array
+    {
+   		$plugins = $this->plugins;
+ 
+        return array_unique($plugins);
+    }
+    public function setPlugins(array $plugins): void
+    {
+        $this->plugins = $plugins;
+    }
+	
+	public function getBundles(): array
+    {
+   		$bundles = $this->bundles;
+ 
+        return array_unique($bundles);
+    }
+    public function setBundles(array $bundles): void
+    {
+        $this->bundles = $bundles;
     }
 }

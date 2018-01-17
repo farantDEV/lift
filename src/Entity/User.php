@@ -54,8 +54,8 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="json")
      */
     private $roles = [];
- 
-    public function getId(): int
+	 
+    public function getId(): ?int
     {
         return $this->id;
     }
