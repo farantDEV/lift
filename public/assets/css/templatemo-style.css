@@ -231,11 +231,11 @@ i.fa{
 i.fa:hover{
 	color: #ff6633;
 }
-i.fa.fa-arrow-circle-o-down, i.fa.fa-book{
+i.fa.fa-arrow-circle-o-down, i.fa.fa-plus-circle{
 	vertical-align: middle;
 	color: #fff;
 }
-i.fa.fa-arrow-circle-o-down:hover, i.fa.fa-book:hover{
+i.fa.fa-arrow-circle-o-down:hover, i.fa.fa-plus-circle:hover{
 	color: #ff6633;
 }
 .cd-slider-nav .image-icon:hover {
@@ -255,7 +255,9 @@ i.fa.fa-arrow-circle-o-down:hover, i.fa.fa-book:hover{
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 /* EXTRAS */
-
+span.menuNav_home_button{
+	margin-top: 4%;
+}
 
 /*
 =====================

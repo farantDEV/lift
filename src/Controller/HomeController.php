@@ -58,8 +58,26 @@ class HomeController extends Controller
 	/**
      * @Route("/story", name="story")
      */
-	 public function storyAction()
+	 public function storyAction(Request $request)
     {
-        return $this->render('Story/story.html.twig');
+        $session = new Session();
+		$contact = new contact();
+		$form = $this->get('form.factory')->create(ContactType::class, $contact);
+		
+		$form->handleRequest($request);
+		if ($form->isSubmitted() && $form->isValid()) {
+			
+			$em 			= $this->getDoctrine()->getManager();
+			$em->persist($contact);
+            $em->flush();
+			
+			$session->getFlashBag()->add('success', 'Your message have been send!');
+			$session->clear();
+			
+			return $this->redirectToRoute('contact_send');
+		}
+		
+		
+		return $this->render('Story/story.html.twig', array('form' => $form->createView() ));
     }
 }

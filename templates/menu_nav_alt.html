@@ -1,19 +1,20 @@
  <div class="cd-slider-nav container">
 	<nav class="row">
 	  <span class="cd-marker item-1"></span>
+	  <span class="col-md-1 menuNav_home_button"><a href="{{ path('index') }}"><div class=""><img src="assets/img/logo/logoFlint.svg" class="logo"></div><h6 class="">HOME</h6></a></span>
 	  <ul class="col-md-10">
-		  <li class="selected"><a href="{{ path('index') }}"><div class="image-icon-logo"><img src="assets/img/logo/logoFlint.svg" class="logo"/></div><h6><span id="lastLetter">L</span>O<span id="lastLetter">I</span>C <span id="lastLetter">F</span>ARAN<span id="lastLetter">T</span></h6></a></li>
-		<li><a href="#0"><div class="image-icon"><img src="assets/img/logo/analytics.svg" class="menuIcon"></div><h6>About me </h6></a></li>
-		<li><a href="#0"><div class="image-icon"><img src="assets/img/logo/repair.svg" class="menuIcon"></div><h6>Toolbox</h6></a></li>
-		<li><a href="#0"><div class="image-icon"><img src="assets/img/logo/coding.svg" class="menuIcon"></div><h6>Playground</h6></a></li>
+		  <li class="selected"><a href="#0"><div class="image-icon"><img src="assets/img/logo/story/network.svg" class="menuIcon"/></div><h6>Work ethic</h6></a></li>
+		<li><a href="#0"><div class="image-icon"><img src="assets/img/logo/story/resume.svg" class="menuIcon"></div><h6>PREVIOUS</h6></a></li>
+		<li><a href="#0"><div class="image-icon"><img src="assets/img/logo/story/turntable.svg" class="menuIcon"></div><h6>Life style</h6></a></li>
 		<li><a href="#0"><div class="image-icon"><img src="assets/img/logo/tea-cup.svg" class="menuIcon"></div><h6>Contacts</h6></a></li>
 	  </ul>
-	  <div class="col-md-2 log_buttons">
+	  <div class="col-md-1 log_buttons">
 		{% if is_granted('ROLE_USER') %}
 			<span><a href="{{ path('security_logout') }}"><div class="image-icon"><img src="assets/img/logo/logout.svg" class="menuIcon"></div><h6 class="log">log out</h6></a></span>
 		{% else %}	
 			<span><a href="{{ path('security_login') }}"><div class="image-icon"><img src="assets/img/logo/login.svg" class="menuIcon"></div><h6 class="log">log in</h6></a></span>
 		{% endif %}
+		
 	  </div>
 	</nav> 
 </div> <!-- .cd-slider-nav -->
