@@ -30,7 +30,7 @@ easy_admin:
                     - {  property: 'Client', type: 'text'}
                     - {  property: 'startDate', type: 'datetime', label: 'start'}
                     - {  property: 'endDate', type: 'datetime', label: 'end'}
-                    - {  property: 'online', type: 'boolean'}
+                    - {  property: 'online'}
                     - {  property: 'host', type: 'url'}
                     - {  property: 'git', type: 'url'}
                     - {  property: 'licence', type: 'string'}
@@ -46,15 +46,15 @@ easy_admin:
                     - {  property: 'name', type: 'text'}
                     - {  property: 'presentation', type: 'textarea', label: 'About'}
                     - {  property: 'Client', type: 'text'}
-                    - {  property: 'startDate', type: 'datetime', label: 'start'}
-                    - {  property: 'endDate', type: 'datetime', label: 'end'}
-                    - {  property: 'online', type: 'checkbox'}
-                    - {  property: 'host', type: 'url'}
-                    - {  property: 'git', type: 'url'}
+                    - {  property: 'startDate', type: 'datetime', label: 'start', type_options: { required: false }}
+                    - {  property: 'endDate', type: 'datetime', label: 'end', type_options: { required: false }}
+                    - {  property: 'online', type: 'checkbox', type_options: { required: false }}
+                    - {  property: 'host', type: 'url', type_options: { required: false }}
+                    - {  property: 'git', type: 'url', type_options: { required: false }}
                     - {  property: 'licence', type: 'text'}
-                    - {  property: 'tools', type: 'collection'}
-                    - {  property: 'contributors', type: 'collection'}
-                    - {  property: 'images', type: 'collection'}
-                    - {  property: 'resources', type: 'collection'}
-                    - {  property: 'plugins', type: 'collection'}
-                    - {  property: 'bundles', type: 'collection'}
+                    - {  property: 'tools', type: 'collection', type_options: { required: false }}
+                    - {  property: 'contributors', type: 'collection', type_options: { required: false }}
+                    - {  property: 'images', type: 'collection', type_options: { required: false }}
+                    - {  property: 'resources', type: 'collection', type_options: { required: false }}
+                    - {  property: 'plugins', type: 'collection', type_options: { required: false }}
+                    - {  property: 'bundles', type: 'collection', type_options: { required: false }}

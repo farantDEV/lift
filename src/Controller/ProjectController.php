@@ -1,22 +1,34 @@
 <?php
 namespace App\Controller;
 
-use App\Form\ProjectType;
 use App\Entity\Project;
+use App\Repository\ProjectRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
+
 use Symfony\component\HttpFoundation\Session\Session;
 
 class ProjectController extends Controller
 {
 	/**
      * @Route("/project", name="project")
+	 * 
      */
-    public function contactSend()
+    public function ProjectAction()
     {
-        return $this->render('Project/project.html.twig');
+       	$repository = $this->getDoctrine()->getRepository(Project::class);
+		$project = new Project;
+		$projects = $repository->findAll();
+		
+		foreach ($projects as $project){
+			$project->getName();
+			$project->getPresentation();
+		}
+		
+		return $this->render('Project/allProjects.html.twig',[
+			'projects'	=> $projects,
+		]);
     }
-	
 }

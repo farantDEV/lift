@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Form\ContactType;
 use App\Entity\Contact;
+use App\Entity\Project;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -80,4 +81,7 @@ class HomeController extends Controller
 		
 		return $this->render('Story/story.html.twig', array('form' => $form->createView() ));
     }
+	
+	
+	
 }

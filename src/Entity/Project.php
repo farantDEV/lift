@@ -39,7 +39,7 @@ class Project
      * @var datetime
      *
      * @ORM\Column(type="datetime")
-     * @Assert\NotBlank(message="Enter a starting date for this project.")
+     * 
      */
 	private $startDate;
 		
@@ -47,7 +47,7 @@ class Project
      * @var datetime
      *
      * @ORM\Column(type="datetime")
-     * @Assert\NotBlank(message="Enter a ending date for this project.")
+     * 
      */
 	private $endDate;
 
@@ -55,7 +55,7 @@ class Project
      * @var boolean
      *
      * @ORM\Column(type="boolean")
-     * @Assert\NotBlank(message="Enter a status for this project.")
+     * 
      */
     private $online;
 	
@@ -132,7 +132,8 @@ class Project
      */
     private $bundles = [];
 	
-
+	
+	
     public function getId() {
         return $this->id;
     }
