@@ -65,7 +65,7 @@ video::-webkit-media-controls {
   font-size: 13px;
   font-weight: 600;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 25px;
   text-decoration: none;
   border: 1px solid transparent;
 }
@@ -175,7 +175,7 @@ video::-webkit-media-controls {
   width: 80px;
   height: 40px;
   line-height: 50px;
-  border-radius: 3px;
+  border-radius: 25px;
   text-align: center;
   margin: auto;
   padding: 0px;
@@ -220,8 +220,8 @@ h6.log{
 }
 
 img.menuIcon{
-	height: 35px;
-	margin-bottom: 10px;
+	width: 40%;
+	margin-bottom: 15%;
 }
 
 i.fa{
@@ -798,7 +798,7 @@ span {
   color: #343434;
   font-size: 13px;
   padding: 12px 18px;
-  border-radius: 3px;
+  border-radius: 25px;
   text-decoration: none;
   outline: none;
   margin-bottom: 0px;

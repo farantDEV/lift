@@ -13,13 +13,16 @@ class ProjectRepository extends ServiceEntityRepository
         parent::__construct($registry, Project::class);
     }
 
-    public function loadProjectById($id)
+    /*
+    public function findBySomething($value)
     {
-        return $this->createQueryBuilder('u')
-            ->where('u.id = :id')
-            ->setParameter('name', $name)
-            ->setParameter('presentation', $presentation)
+        return $this->createQueryBuilder('a')
+            ->where('a.something = :value')->setParameter('value', $value)
+            ->orderBy('a.id', 'ASC')
+            ->setMaxResults(10)
             ->getQuery()
-            ->getOneOrNullResult();
+            ->getResult()
+        ;
     }
+    */
 }

@@ -38,7 +38,7 @@ class Project
 	/**
      * @var datetime
      *
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      * 
      */
 	private $startDate;
@@ -46,7 +46,7 @@ class Project
 	/**
      * @var datetime
      *
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      * 
      */
 	private $endDate;
@@ -54,7 +54,7 @@ class Project
     /**
      * @var boolean
      *
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      * 
      */
     private $online;
@@ -62,7 +62,7 @@ class Project
 	/**
      * @var string
      *
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      *
      */
     private $host;
@@ -86,54 +86,53 @@ class Project
 	 /**
      * @var string
      *
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     private $git;
 	
 	 /**
      * @var array
      *
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json", nullable=true)
      */
     private $tools = [];
 	
 	/**
      * @var array
      *
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json", nullable=true)
      */
     private $contributors = [];
 	
 	/**
      * @var array
      *
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json", nullable=true)
      */
     private $images = [];
 	
 	/**
      * @var array
      *
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json", nullable=true)
      */
     private $resources = [];
 	
 	/**
      * @var array
      *
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json", nullable=true)
      */
     private $plugins = [];
 	
 	/**
      * @var array
      *
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json", nullable=true)
      */
     private $bundles = [];
 	
-	
-	
+
     public function getId() {
         return $this->id;
     }

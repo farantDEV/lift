@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-name="Ebene 1" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="a" x1="387.26" x2="152.36" y1="376.95" y2="611.86" gradientUnits="userSpaceOnUse">
+   <stop offset="0"/>
+   <stop stop-opacity="0" offset="1"/>
+  </linearGradient>
+ </defs>
+ <circle cx="400" cy="400" r="400" fill="#330099"/>
+ <path d="m300.44 793.53l306.93-306.93v-244.76h-414.75l-191.93 191.93c20.276 188.65 126.54 303.09 299.74 359.76z" fill="url(#a)" opacity=".42"/>
+ <path d="m607.38 486.59v-244.76h-414.75v244.76h184.48v53.573h-43.438v18h132.67v-18h-43.438v-53.573zm-395.15-228h375v210.94h-375z" fill="#fff"/>
+</svg>

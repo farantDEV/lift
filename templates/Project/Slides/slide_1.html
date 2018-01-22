@@ -1,0 +1,45 @@
+<li class="selected">
+  <div class="heading">
+	<h1>Development</h1>
+	<span class="subtitle">Display of my latest projects</span>
+  </div>
+  <div class="cd-full-width first-slide">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12">
+		  <div class="content story_content">
+			
+			<div class="work_ethic">
+				{% for project in projects %}
+				<div class="col-md-4 project_display">
+					<div class=""><img src="assets/img/project/{{ project.images.0 }}" alt="project_image"></div>
+					<h3 class="ethic_title">{{ project.name }}</h3>
+					<div class="story_text"><p>{{ project.presentation }} </p></div>
+					<div class="tools">
+						<div class="display_tools" >
+							<img src="assets/img/tech/{{ project.tools.0 }}" alt="project_tools" class="tool_img">
+							<img src="assets/img/tech/{{ project.tools.1 }}" alt="project_tools" class="tool_img">
+							<img src="assets/img/tech/{{ project.tools.2 }}" alt="project_tools" class="tool_img">
+						</div>
+					</div>
+				</div>
+				
+				{% endfor %}
+				
+				
+			</div>
+			
+					<div class="nav_button_ethic col-md-2">
+						<a href="{{ path('index') }}"><div class="col-md-4"><i class="fa fa-home" aria-hidden="true" title="Home"></i></div></a>
+						<a href="{{ path('story') }}"><div class="col-md-4"><i class="fa fa-user" aria-hidden="true" title="About me"></i></div></a>
+						<a href="../public/dl/resume_farant.pdf" download><div class="col-md-4"><i class="fa fa-download" aria-hidden="true" title="Download resume"></i></div>
+						</a>
+					</div>
+			
+		  </div>
+		</div>
+	  </div>                  
+	</div>
+  </div>
+</li>
+       

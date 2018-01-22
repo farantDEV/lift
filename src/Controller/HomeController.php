@@ -3,7 +3,6 @@ namespace App\Controller;
 
 use App\Form\ContactType;
 use App\Entity\Contact;
-use App\Entity\Project;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -36,7 +35,7 @@ class HomeController extends Controller
 		}
 		
 		
-		return $this->render('Home/index.html.twig', array('form' => $form->createView() ));
+		return $this->render('Home/index.html.twig', ['form' => $form->createView()] );
     }
  
     
@@ -45,15 +44,23 @@ class HomeController extends Controller
      */
     public function contactSendAction()
     {
-        return $this->render('Home/contactSend.html.twig');
+        return $this->render('contactSend.html.twig');
     }
 	
 	/**
      * @Route("/404", name="404_error")
      */
-    public function ErrorRedirection()
+    public function ErrorRedirectionAction()
     {
-        return $this->render('Home/404.html.twig');
+        return $this->render('404.html.twig');
+    }
+	
+	/**
+     * @Route("/credits", name="app_credits")
+     */
+    public function CreditsAction()
+    {
+        return $this->render('credits.html.twig');
     }
 	
 	/**
@@ -81,7 +88,4 @@ class HomeController extends Controller
 		
 		return $this->render('Story/story.html.twig', array('form' => $form->createView() ));
     }
-	
-	
-	
 }
