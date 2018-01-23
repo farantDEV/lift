@@ -13,17 +13,9 @@
 					<p class="text-center">Click on buttons or logo, for another action. </p>
 					<p class="text-center">Regards.</p>
 				</div>
-				{% if is_granted('ROLE_USER') %}
-					<center><div class="btn-group">
-						<a href="{{ path('index')}}" class="btn btn-lg btn-primary">Home</a>
-						<a href="{{ path('security_logout')}}" class="btn btn-lg btn-default">Log Out</a>
-					</div></center>
-				{% else %}
-					<center><div class="btn-group">
-						<a href="{{ path('security_login')}}" class="btn btn-lg btn-blue">Sign In</a>
-						<a href="{{ path('user_registration')}}" class="btn btn-lg btn-orange">Sign Up</a>
-					</div></center>
-				{% endif %}
+				
+						{{ include('Buttons/home_about_project.html')}}
+					
 			</div>
 		</div>
 	</div>

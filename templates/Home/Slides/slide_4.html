@@ -10,14 +10,26 @@
 		  <div class="content fourth-content">
 			<div class="row">
 			  <div class="col-md-3 project-item">
-				<a href="{{ path('security_login')}}" >
-					<div class="yardIcon">
-						<img src="assets/img/lab/login.svg" class="imageLab">
-						<div class="middle">
-							<div class="text2">Login/Register</div>
-						</div>
-					</div> 
-				</a>
+			  	{% if is_granted('ROLE_USER') %}
+					<a href="{{ path('security_logout')}}" >
+						<div class="yardIcon">
+							<img src="assets/img/lab/login.svg" class="imageLab">
+							<div class="middle">
+								<div class="text2">Logout</div>
+							</div>
+						</div> 
+					</a>
+				{% else %}
+					<a href="{{ path('security_login')}}" >
+						<div class="yardIcon">
+							<img src="assets/img/lab/login.svg" class="imageLab">
+							<div class="middle">
+								<div class="text2">Login/Register</div>
+							</div>
+						</div> 
+					</a>
+				
+				{% endif %}
 			  </div>
 			  <div class="col-md-3 project-item">
 				<a href="{{ path('admin') }}" >
@@ -60,7 +72,7 @@
 				</a>
 			  </div>
 			  <div class="col-md-3 project-item">
-				<a href="" >
+				<a href="{{ path('project') }}" >
 					<div class="yardIcon">
 						<img src="assets/img/lab/music-player.svg" class="imageLab">
 						<div class="middle">
@@ -70,17 +82,17 @@
 				</a>
 			  </div>
 			  <div class="col-md-3 project-item">
-				<a href="" >
+				<a href="{{ path('project') }}" >
 					<div class="yardIcon">
 						<img src="assets/img/lab/approve.svg" class="imageLab">
 						<div class="middle">
-							<div class="text2">Achievement</div>
+							<div class="text2">Updates</div>
 						</div>
 					</div>
 				</a>
 			  </div>
 			  <div class="col-md-3 project-item">
-			   <a href="" >
+			    <a href="../public/assets/dl/resume_farant.pdf" download>
 				<div class="yardIcon">
 					<img src="assets/img/lab/download.svg" class="imageLab">
 					<div class="middle">

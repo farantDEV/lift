@@ -3,9 +3,12 @@ easy_admin:
     site_name: 'Lïft DashBoard'
     design:
         brand_color: '#FF6633'
+        assets:
+            favicon: 'favicon_admin.png'
     entities:
         User:
             class: App\Entity\User
+            label: 'Users'
             list:
                 fields:
                     - {  property: 'username', type: 'text'}
@@ -19,9 +22,10 @@ easy_admin:
                     - {  property: 'roles', type: 'collection', label: 'User Role'}
         Contact:
             class: App\Entity\Contact
+            label: 'Contacts'
         Project:
             class: App\Entity\Project
-            label: 'Lïft Projects'
+            label: 'Projects'
             list:
                 Title: 'list.%%entity_label%%'
                 fields:

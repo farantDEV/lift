@@ -131,3 +131,10 @@ display:block;
 .tool{
 	width: 75%;
 }
+/* Responsive*/
+
+@media (max-width: 850px){
+	div.content.story_content{
+		height: auto;
+	}
+}

@@ -28,12 +28,9 @@
 				</div>
 			</div>
 			
-					<div class="nav_button_ethic col-md-2">
-						<a href="{{ path('index') }}"><div class="col-md-4"><i class="fa fa-home" aria-hidden="true" title="Home"></i></div></a>
-						<a href="{{ path('project') }}"><div class="col-md-4"><i class="fa fa-folder-open" aria-hidden="true" title="Projects"></i></div></a>
-						<a href="../public/dl/resume_farant.pdf" download><div class="col-md-4"><i class="fa fa-download" aria-hidden="true" title="Download resume"></i></div>
-							</a>
-			
+					<div class="nav_button_ethic col-md-2 col-xs-6">
+						{{ include('Buttons/home_project_resume.html')}}
+					</div>
 		  </div>
 		</div>
 	  </div>                  

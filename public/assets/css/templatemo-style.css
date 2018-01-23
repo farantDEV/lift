@@ -187,14 +187,12 @@ video::-webkit-media-controls {
   width: 80px;
   height: 40px;
   line-height: 0px;
- 
   text-align: center;
   margin: auto;
   padding: 0px;
-   
-	
-	
 }
+
+
 .image-icon-logo:hover{
 	border-bottom: 2px solid #ff6633;
 	
@@ -203,6 +201,9 @@ video::-webkit-media-controls {
 img.logo{
 	display: block;
 	margin: auto;
+	background-color: #330099;
+	border-radius: 3px;
+	padding: 5%;
 	
 	
 }
@@ -257,6 +258,7 @@ i.fa.fa-arrow-circle-o-down:hover, i.fa.fa-plus-circle:hover{
 /* EXTRAS */
 span.menuNav_home_button{
 	margin-top: 4%;
+	
 }
 
 /*
@@ -901,7 +903,7 @@ img.footerLogo {
   }
 
   .cd-slider-nav .image-icon img {
-    width: 45px;
+    width: 30px;
 	  
 	
   }

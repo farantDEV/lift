@@ -45,6 +45,8 @@ security:
         # Là dans ce cas seul les utilisateurs ayant le rôle ROLE_ADMIN
         # peuvent acceder à toutes les pages commençant par /admin
         - { path: '^/admin', roles: ROLE_ADMIN }
+        - { path: '^/project', roles: ROLE_USER }
+        - { path: '^/story', roles: ROLE_USER }
 
     role_hierarchy:
         ROLE_ADMIN:        ROLE_USER
