@@ -60,7 +60,7 @@ class HomeController extends Controller
      */
     public function CreditsAction()
     {
-        return $this->render('credits.html.twig');
+        return $this->render('app_infos.html.twig');
     }
 	
 	/**

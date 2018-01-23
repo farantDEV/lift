@@ -43,7 +43,12 @@ border-radius: 10px;
 .nav_button_ethic{
 	background-color: #330099;
 border-radius: 10px;
-	margin: 2% 0 0 42%
+	margin: 2% 0 0 42%;
+}
+.nav_button_menu{
+	background-color: #330099;
+border-radius: 10px;
+	margin: 2% 33%;
 }
 
 .slide_title{
@@ -137,4 +142,9 @@ display:block;
 	div.content.story_content{
 		height: auto;
 	}
+	.nav_button_menu{
+	background-color: #330099;
+border-radius: 10px;
+	margin: 2% 15%;
+}
 }

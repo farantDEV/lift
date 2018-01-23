@@ -20,12 +20,11 @@
 						<br/><br/>
 						Since 2001 my professional ambition remain the same, step up and joining teams to make things happens.</p><br/>
 						{% if is_granted('ROLE_USER') %}
-						  <div class="primary-button">
-							<a href="{{ path('story') }}"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i> More</a>
-						  </div>
+						  <div class="col-md-12" >{{ include('Buttons/home_about_project_resume.html')}}</div>
 						{% else %}
-						<br/>
-						<a href="{{ path('security_login') }}">Login</a>/<a href="{{ path('security_login') }}">Register</a> for more about me.
+							<em>Log in or register for more.</em>
+							<br/>
+							<div class="col-md-12">{{ include('Buttons/home_about_project_log_reg.html')}} </div>
 						{% endif %}
 					</div>
 				  </div>
@@ -38,12 +37,11 @@
 					   Analysis / Design / Development / Production / Evaluation.<br/> </p>
 					<p>I provide: coding, documents writing, budget tracking, meeting conduct and team coordination.</p> <br/>
 					  	{% if is_granted('ROLE_USER') %} 
-				  			<div class="primary-button">
-								<a href="../public/assets/dl/resume_farant.pdf" download><i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i> Resume</a>
-						  	</div>
+				  			<div class="col-md-8 col-xs-8" >{{ include('Buttons/home_about_project_resume.html')}}</div>
 					  	{% else %}
+							<em>Log in or register for download resume.</em>
 							<br/>
-							<a href="{{ path('security_login') }}">Login</a>/<a href="{{ path('security_login') }}">Register</a> to download resume.
+							<div class="col-md-8">{{ include('Buttons/home_about_project_log_reg.html')}} </div>
 						{% endif %}
 					</div>
 				  </div>

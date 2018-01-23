@@ -2,6 +2,11 @@
 
 
 {% block body %}
+ 	{% for flashMessage in app.session.flashbag.get('success') %}
+		<div class="alert alert-success" >
+          {{ flashMessage }}
+      	</div>
+	{% endfor %}
   	<div class="overlay"></div>
 		
          <section class="cd-hero">

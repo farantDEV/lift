@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+  
+{% block body %}
+	
+	<div class="container" style="text-align:center; background-color:#330099; ">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3" >
+				<div class="account-box">
+					<a href="{{ path('index') }}">
+						<div class="logo " style="margin: 2% 0 2%;">
+							<img src="assets/img/logo/logoFlint.svg" class="lf_logo"/>
+						</div>
+					</a>
+						<div class="well col-md-12">{% if is_granted('ROLE_USER') %}
+				<div class="col-md-8 col-xs-12" style='margin-left:7%;' >{{ include('Buttons/home_about_project.html')}}</div>
+			{% else %}
+				
+				<div class="col-md-10 col-xs-12"  >{{ include('Buttons/home_about_project_logreg.html')}} </div>
+			{% endif %}
+						</div>
+							<div class="row">
+			<div class="well col-md-12 col-xs-12" >
+			<p>This app is perfectible and it will. Improvements will be made gradually. All remarks and suggestions are welcomed. If you have any questions about htis app, feel free to reach me at: farant.cdp@gmail.com</p><br/>
+				<p>Lïft v1.1 </p>
+				<p>jan 2018</p>
+				<p>http://www.dsxdb.fr</p>
+				<p>code <a href="https://www.github.com/farantDEV/lift" target="_blank">Here</a> </p>
+				<br/>
+				
+			</div>
+			
+			<div class="col-md-12 col-xs-12" >
+				<div class="well">
+					<p><strong>FRAMEWORK</strong></p>
+					<ul>
+						<li><a href="https://symfony.com/" target="_blank" >Symfony 4.0.3</a> </li>
+					</ul>
+					<p><strong>BUNDLES</strong></p>
+					<ul>
+						<li><a href="https://twig.symfony.com/doc/2.x/" target="_blank" >Doctrine</a> </li>
+						<li><a href="http://www.doctrine-project.org/" target="_blank" >Twig</a> </li>
+						<li><a href="https://github.com/javiereguiluz/EasyAdminBundle" target="_blank" >Easy admin</a> </li>
+					</ul>
+					<p><strong>LIBRARIES</strong></p>
+					<ul>
+						<li><a href="https://getbootstrap.com/" target="_blank" >Bootstrap</a> </li>
+						<li><a href="https://jquery.com/" target="_blank" >Jquery</a> </li>
+						<li><a href="http://fontawesome.io/icons/" target="_blank" >Fontawesome</a> </li>
+						
+					</ul>
+					<p><strong>TEMPLATE</strong></p>
+					<ul>
+						<li><a href="http://www.templatemo.com/tm-503-newline" target="_blank" >Newline</a> </li>
+					</ul>
+					<p><strong>IMAGES</strong></p>
+					<ul>
+						<li><a href="https://pixabay.com/" target="_blank" ><strong>Pixabay</strong> (Mohames Hassan/basketball player)</a> </li>
+					</ul>
+					<p><strong>ICONS</strong></p>
+					<ul>
+						<li><a href="https://www.flaticon.com/" target="_blank" ><strong>Flaticons</strong> (Eucalyp)</a> </li>
+						
+					</ul>
+			</div>
+			<div class="well col-md-12">{% if is_granted('ROLE_USER') %}
+				<div class="col-md-8 col-xs-12" style='margin-left:7%;' >{{ include('Buttons/home_about_project.html')}}</div>
+			{% else %}
+				<div class="col-md-10 col-xs-12"   >{{ include('Buttons/home_about_project_logreg.html')}} </div>
+			{% endif %}
+						</div>
+		</div>
+		
+	</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

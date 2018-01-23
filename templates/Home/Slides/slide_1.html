@@ -1,7 +1,7 @@
 <li class="selected">
   <div class="heading">
 	<h1 data-morph>FULL STACK DEVELOPER</h1>
-	<span class="subtitle">Add a fresh look to your project.</span>
+	<span class="subtitle">Don't reinvent wheel, but the way we roll.</span>
   </div>
   <div class="cd-full-width first-slide">
 	<div class="container">
@@ -9,14 +9,13 @@
 		<div class="col-md-12">
 		  <div class="content first-content">
 			<h4>Experience<span id="lastLetter">s</span> are the key.</h4>
-			<p><q>Different perspectives, experiences and insights, improve decision-making and lead to superior performances. </q><br/> <strong>Lynne DOUGHTIE</strong> Chairman and CEO KPMG US</p>
+			<p><q>Different perspectives, experiences and insights, improve decision-making and lead to superior performances. </q><br/> <strong>Lynne DOUGHTIE</strong> Chairman and CEO KPMG US</p><br/>
 			{% if is_granted('ROLE_USER') %}
-				<div class="primary-button">
-				  <a href="../public/assets/dl/resume_farant.pdf" download><i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i> DOWNLOAD Resume</a>
-				</div>
+				<div class="col-md-6 col-xs-6" style='margin-left:22%;' >{{ include('Buttons/home_about_project_resume.html')}}</div>
 			{% else %}
+				<em>Log in or register to download resume.</em>
 				<br/>
-				<a href="{{ path('security_login') }}">Login</a>/<a href="{{ path('user_registration') }}">Register</a> to download resume.
+				<div class="col-md-4 col-xs-10"  style='margin-left:28%;' >{{ include('Buttons/home_about_project_log_reg.html')}} </div>
 			{% endif %}
 		  </div>
 		</div>

@@ -193,10 +193,7 @@ video::-webkit-media-controls {
 }
 
 
-.image-icon-logo:hover{
-	border-bottom: 2px solid #ff6633;
-	
-}
+
 
 img.logo{
 	display: block;
