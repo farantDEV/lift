@@ -56,11 +56,11 @@ class HomeController extends Controller
     }
 	
 	/**
-     * @Route("/credits", name="app_credits")
+     * @Route("/infos", name="app_infos")
      */
     public function CreditsAction()
     {
-        return $this->render('app_infos.html.twig');
+        return $this->render('Infos/app_infos.html.twig');
     }
 	
 	/**
